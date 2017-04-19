@@ -1,0 +1,350 @@
+// MANIFEST
+
+@import "partials/setup";
+@import "partials/variables";
+@import "partials/jsPartial";
+
+
+// ELEMENTS
+
+svg, path, a, span {
+	transition: all 0.3s ease;
+}
+
+body {
+	background-color: $colorLight;
+	font-family: $fontPrimary;
+	font-size: 62.5%;
+	color: $colorDark;
+}
+
+a{
+	color: #333333;
+	text-decoration: none;
+}
+
+a:hover{
+	color: $colorSecondary;
+}
+
+nav {
+	background-color: #fff;
+	box-shadow: 0 2px 1px 0 #ccc;
+	padding: 5px 0;
+	ul {
+		padding: 0;
+		margin-top: 20px;
+		list-style-type: none;
+		li{
+			padding: 15%;
+			display: inline;
+			a {
+			text-decoration: none;
+			font-size: 1.2rem;
+			color: $colorDark;	
+			&:hover {
+				color: $colorSecondary;
+				}
+			}
+		}
+	}
+}
+
+main {
+	padding: 20px 0;
+}
+
+section {
+	float: left;
+	width: calc(50% - 30px);
+	margin: 15px;
+}
+
+h1 {
+	font-size: 1.5rem;
+	letter-spacing: 0.01rem;
+	margin-bottom: 4px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+p {
+	font-size: 1rem;
+}
+
+footer {
+	background-color: white;
+	padding: 15px;
+	text-align: right;
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-family: $fontSecondary;
+}
+
+input {
+	color: $colorMedium;
+	border: none;
+	border-bottom: 2px solid lightgrey;
+	&:focus{
+		outline: none;
+		border-bottom: 2px solid $colorMedium;
+	}
+}
+
+// QUIZ MENU
+
+#quizMenu
+{
+	list-style:none;
+	position:relative;
+	ul{
+		display:none;
+		position:absolute;
+		top:60%;
+		left:25%;
+		background: #fff;
+		border-radius: 5px;
+		box-shadow: 0 2px 1px 0 #ccc;
+		margin:0;
+		padding:15px 0 0 0;
+	}
+	li{
+		position:relative;
+		margin:0;
+		padding:0;
+		a {
+			display:block;
+			padding:8px;
+			margin: 0 0 0 6px;
+			font-size: 1rem;
+		}
+	}
+}
+
+#quizMenu:hover > ul
+{
+	display:block;
+}
+
+// CLASSES and IDS
+
+.wrapper {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.content{
+	min-height: 85vh;
+}
+
+#svgLogo {
+	width: 130px;
+}
+
+.navLeft{
+	float: left;
+	width: 40%;
+	text-align: left;
+}
+
+.navRight{
+	float: right;
+	width: 40%;
+	text-align: right;
+}
+
+.logo{
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+
+.heading {
+	text-align: center;
+}
+
+.selectedLink {
+	color: $colorSecondary;
+	cursor: default;
+}
+
+.quiz__content{
+	display: none;
+}
+
+#about__content{
+	display: none;
+	h1{
+		text-align: center;
+	}
+}
+
+.about__container{
+	background-color: #fff;
+	margin-top: 20px;
+	padding: 20px 40px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 1px 0px #ccc;
+	li{
+		font-size: 1rem;
+	}
+}
+
+.muscleVisual{
+	background: URL('../assets/circle.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50px;
+	background-size: 80%;
+}
+
+
+.muscleVisual__container {
+	text-align: center;
+	svg {
+		max-height: 90vh;
+	}
+}
+
+.muscleInfo {
+	p {
+		margin-top: 0;
+	}
+}
+
+.muscleInfo__container {
+	background-color: white;
+	padding: 40px;
+	width: 100%;
+	min-height: 40vh;
+	border-radius: 10px;
+	box-shadow: 2px 2px 1px 0px #ccc;
+}
+
+.muscleInfo__details {
+	list-style-type: none;
+	padding: 0;
+	line-height: 1.5;
+	color: $colorMedium;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
+	.muscleInfo__import {
+		text-transform: none;
+		font-size: 1.2rem;
+		padding-bottom: 15px;
+		letter-spacing: 0;
+	}
+}
+
+.quizForm{
+	display:none;
+}
+
+.mobileOnly{
+	display: none;
+}
+
+.desktopOnly{
+	display: default;
+}
+
+@media (max-width: 940px) {
+	.wrapper {
+		width: 90%;
+	}
+}
+
+@media (max-width: 860px) {
+	nav ul li a{
+		font-size: 1rem;
+	}
+
+	h1{
+		font-size: 1.3rem;
+	}
+
+	p{
+		font-size: 0.8rem;
+	}
+
+	.about__container ul{
+		padding-left: 15px;
+		li{
+		font-size: 0.8rem;
+		}
+	}
+
+	.muscleInfo__container {
+		padding: 20px;
+	}
+
+	.muscleInfo__details{
+		.muscleInfo__import {
+			font-size: 1rem;
+			padding-bottom: 8px;
+		}
+	}
+}
+
+@media (max-width: 585px) {
+	nav {
+		padding: 0;
+		ul {
+			margin-top: 10px;
+			li{
+				padding: 10px 20px;
+				display: block;
+				a{
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+
+	.navLeft, .navRight{
+		width: 30%;
+	}
+
+	.logo{
+		padding: 10px 0;
+		width: 40%;
+	}
+
+	#quizMenu li a{
+		font-size: 0.8rem;
+	}
+
+	main {
+		padding: 10px 0;
+	}
+
+	section {
+		width: calc(100% - 30px);
+		margin: 15px;
+	}
+
+	.muscleVisual__container {
+		svg {
+			max-height: 60vh;
+		}
+	}
+
+	.muscleInfo__container {
+		min-height: 100%;
+		padding: 6px 20px;
+	}
+
+	.muscleVisual{
+		background-position: 50% 0;
+		background-size: 70%;
+	}
+
+	.mobileOnly{
+		display: block;
+	}
+
+	.desktopOnly{
+		display: none;
+	}
+
+}
