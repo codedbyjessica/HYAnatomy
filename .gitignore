@@ -1,4 +1,6 @@
 .zip
-node_modules/
-.ai
+/stuff
+/node_modules
+/public
 .psd
+.ai
